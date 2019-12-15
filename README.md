@@ -19,6 +19,8 @@ Now I no longer need to worry about the nuances of different requirements in our
 
 Interfaces and a delegation pattern would've been one obvious choice here but, wait, I was using Spring in our project! Out of curiosity I started looking around. I didn't want to fiddle with class loaders and lengthy reflection codes. (Typically, I would need it to find a concrete class of an interface from the classloader) By stroke of dumb luck I found out that Spring can auto-wire a collection containing all concrete classes - of components/beans/services - of an interface. One Set of all my related concrete classes in one nifty auto-wired variable. The codes that are in this repository is the outcome of that work. I understand that the concepts here are rudimentary stuff for Spring but if you ever want to see an application of such concepts, this is it.
 
+The one big bonus of this code is that I've become enthusiastic to come in to work everyday to try something new instead of dreading it because I had to work on shitty code (my code).
+
 ## References
 1. https://dzone.com/articles/load-all-implementors
 2. https://stackoverflow.com/questions/7446301/autowire-reference-beans-into-list-by-type

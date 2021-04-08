@@ -20,22 +20,22 @@ public class AutowiringInterfaceDemo {
 	 * @param ctx
 	 * @return
 	 */
-//	@Bean
-//	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
-//		return args -> {
-//			// Execute all the concrete methods of the Interface.
-//			Map<String, Interface> beans = ctx.getBeansOfType(Interface.class);
-//			beans.forEach((k,v) -> {
-//				System.out.println(k);
-//				v.doSomething();
-//			});
-//			
-//			// Load a class programmatically. Refer to unit test for another example.
-//			InterfaceLoader loader = ctx.getBean(InterfaceLoader.class);
-//			loader.loadClass("ConcreteClass2").doSomething();
-//			
-//			// Throw an exception.
-//			loader.loadClass("ConcreteClass3").doSomething();
-//		};
-//	}
+	@Bean
+	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+		return args -> {
+			// Execute all the concrete methods of the Interface.
+			Map<String, Interface> beans = ctx.getBeansOfType(Interface.class);
+			beans.forEach((k,v) -> {
+				System.out.println(k);
+				v.doSomething();
+			});
+			
+			// Load a class programmatically. Refer to unit test for another example.
+			InterfaceLoader loader = ctx.getBean(InterfaceLoader.class);
+			loader.loadClass("ConcreteClass2").doSomething();
+			
+			// Throw an exception.
+			loader.loadClass("ConcreteClass3").doSomething();
+		};
+	}
 }

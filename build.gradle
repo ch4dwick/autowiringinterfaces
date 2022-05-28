@@ -1,15 +1,14 @@
 plugins {
-	id 'org.springframework.boot' version '2.3.3.RELEASE'
-	id 'java'
+  id 'org.springframework.boot' version '2.7.0'
+  id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+  id 'java'
 }
 
-apply plugin: 'io.spring.dependency-management'
 apply plugin: 'eclipse'
-apply plugin: 'java'
 
 group = 'autowiredinterfaces'
-version = '1.0.0'
-sourceCompatibility = '1.8'
+version = '1.0.1'
+sourceCompatibility = '18'
 
 repositories {
 	mavenCentral()
@@ -18,9 +17,9 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
-	testImplementation('org.junit.jupiter:junit-jupiter:5.4.0') {
-	    exclude group: 'junit', module: 'junit' //by both name and group
-	}
+	// testImplementation('org.junit.jupiter:junit-jupiter:5.8.2') {
+	//     exclude group: 'junit', module: 'junit' //by both name and group
+	// }
 
 }
 

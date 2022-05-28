@@ -1,5 +1,8 @@
 package autowiredinterfaces;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,8 +15,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class ConcreteClass1 implements Interface {
+	private static final Logger LOGGER = Logger.getLogger(ConcreteClass1.class.getName());
+
 	@Override
 	public void doSomething() {
-		System.out.println("I am ConcreteClass1.");
+		LOGGER.log(Level.INFO, "I am ConcreteClass1.");
 	}
 }

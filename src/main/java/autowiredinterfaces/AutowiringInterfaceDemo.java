@@ -32,7 +32,7 @@ public class AutowiringInterfaceDemo {
 			// Execute all the concrete methods of the Interface.
 			Map<String, Interface> beans = ctx.getBeansOfType(Interface.class);
 			beans.forEach((k,v) -> {
-				LOGGER.log(Level.INFO, String.format("Executing %s", k));
+				LOGGER.log(Level.INFO, "Executing {0}", k);
 				v.doSomething();
 			});
 			
